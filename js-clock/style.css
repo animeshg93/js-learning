@@ -1,0 +1,12 @@
+.clock {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+span {
+	font-size: 100px;
+	color: #17D4FE;
+    font-family: sans-serif;
+}
