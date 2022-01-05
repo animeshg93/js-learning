@@ -1,0 +1,29 @@
+.calculator {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	height: 400px;
+	width: 300px;
+	background-color: floralwhite;
+}
+
+.screen {
+	width: 90%;
+	height: 20%;
+	margin: 11.5px;
+	border: 1px solid;
+}
+
+.operators {
+	width: 90%;
+	height: 10%;
+	margin-left: 11.5px;
+}
+
+.operators button {
+	margin-left: 2px;
+	height: 100%;
+	width: 23%;
+	font-size: 20px;
+}
