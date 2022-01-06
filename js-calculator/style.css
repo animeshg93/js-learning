@@ -11,14 +11,14 @@
 .screen {
 	width: 90%;
 	height: 20%;
-	margin: 11.5px;
+	margin: 15px;
 	border: 1px solid;
 }
 
 .operators {
 	width: 90%;
 	height: 10%;
-	margin-left: 11.5px;
+	margin-left: 15px;
 }
 
 .operators button {
@@ -27,3 +27,37 @@
 	width: 23%;
 	font-size: 20px;
 }
+
+.calcBody {
+	height: 55%;
+	width: 90%;
+/*	border: 1px solid;
+*/	margin: 15px;
+}
+
+.numbers {
+	height: 100%;
+	width: 73%;
+	/*border: 1px solid;*/
+	float: left;
+}
+
+.digit {
+	height: 22%;
+	width: 30%;
+	margin-top: 3%;
+	margin-left: 1.5%;
+}
+
+.enter {
+	float: left;
+	margin-left: 2%;
+	height: 100%;
+	width: 24%;
+}
+
+.result {
+	height: 100%;
+	width: 100%;
+}
+
