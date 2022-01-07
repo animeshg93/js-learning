@@ -3,37 +3,38 @@
 <head>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: greenyellow;">
+<body style="background-color: black;">
 	<script src="script.js"></script>
 
 	<div class="calculator">
 		<div class="screen">
-			
+			<input type="text" class="inputScreen" id="inputScreen">
 		</div>
 		<div class="operators">
-			<button id="add">+</button>
-			<button id="sub" >-</button>
-			<button id="div" >/</button>
-			<button id="mul" class="mul">*</button>
+			<button id="add" onclick="operatorInput(this)">+</button>
+			<button id="sub" onclick="operatorInput(this)">-</button>
+			<button id="div" onclick="operatorInput(this)">/</button>
+			<button id="mul" onclick="operatorInput(this)">*</button>
 		</div>
 		<div class="calcBody">
 			<div class="numbers">
-				<button id="9" class="digit">9</button>
-				<button id="8" class="digit">8</button>
-				<button id="7" class="digit">7</button>
-				<button id="6" class="digit">6</button>
-				<button id="5" class="digit">5</button>
-				<button id="4" class="digit">4</button>
-				<button id="3" class="digit">3</button>
-				<button id="2" class="digit">2</button>
-				<button id="1" class="digit">1</button>
-				<button id="0" class="digit">0</button>
+				<button id="9" class="digit" onclick="numberInput(this)">9</button>
+				<button id="8" class="digit" onclick="numberInput(this)">8</button>
+				<button id="7" class="digit" onclick="numberInput(this)">7</button>
+				<button id="6" class="digit" onclick="numberInput(this)">6</button>
+				<button id="5" class="digit" onclick="numberInput(this)">5</button>
+				<button id="4" class="digit" onclick="numberInput(this)">4</button>
+				<button id="3" class="digit" onclick="numberInput(this)">3</button>
+				<button id="2" class="digit" onclick="numberInput(this)">2</button>
+				<button id="1" class="digit" onclick="numberInput(this)">1</button>
+				<button id="0" class="digit" onclick="numberInput(this)">0</button>
 				<button id="." class="digit">.</button>
-				<button id="clear" class="digit">C</button>
+				<button id="c" class="digit" onclick="clearAll()">C</button>
 
 			</div>
 			<div class="enter">
-				<button class="result" id="result">=</button>
+				<button class="erase"><=</button>
+				<button class="result" id="result" onclick="calculate()">=</button>
 			</div>
 		</div>
 		
