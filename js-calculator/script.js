@@ -1,9 +1,9 @@
 var operator = ""
 var counter = 0;
 var inputNumberLength = 4;
-var isOperator = false;
+var isOperatorEntered = false;
 var isCalculated = false;
-var opRegex = /-|\+|\*|\//
+// var opRegex = /-|\+|\*|\//
 var first;
 var second;
 
@@ -24,11 +24,11 @@ function numberInput(button){
 
 function operatorInput(button){
 	// don't want the user to input multiple operators
-	if(!isOperator) {
+	if(!isOperatorEntered) {
 		operator = button.innerHTML;
 		counter = 0;
 		document.getElementById("inputScreen").value += operator
-		isOperator = true;
+		isOperatorEntered = true;
 	}
 }
 
@@ -61,11 +61,12 @@ function clearAll(){
 function erase(){
 	var currentInput = document.getElementById("inputScreen").value;
 	var lastChar = currentInput.charAt(currentInput.length-1);
-	if(lastChar.match(opRegex)){
-		isOperator = false;
-
+	if(lastChar === operator){
+		isOperatorEntered = false;
+		var array = document.getElementById("inputScreen").value.split(operator);
 		//this creates issue
-		counter = first.length	
+		counter = array[0].length;
+		console.log(counter)
 	} 
 	else counter--;
 	document.getElementById("inputScreen").value = currentInput.substring(0,currentInput.length-1);
@@ -74,5 +75,5 @@ function erase(){
 function resetVariables(){
 	isCalculated = true;
 	counter = 0;
-	isOperator = false;
+	isOperatorEntered = false;
 }
