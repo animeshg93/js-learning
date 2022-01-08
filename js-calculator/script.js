@@ -1,7 +1,6 @@
 var operator = ""
 var counter = 0;
-var inputString = ""
-var inputNumberLength = 3;
+var inputNumberLength = 4;
 var isOperator = false;
 var isCalculated = false;
 var opRegex = /-|\+|\*|\//
@@ -17,7 +16,6 @@ function numberInput(button){
 
 	// keep appending numbers to screen until JS integer size limit
 	if(counter < inputNumberLength){
-		inputString += button.innerHTML
 		document.getElementById("inputScreen").value += button.innerHTML;
 		counter++;
 	}
@@ -28,17 +26,16 @@ function operatorInput(button){
 	// don't want the user to input multiple operators
 	if(!isOperator) {
 		operator = button.innerHTML;
-		//parsing the screen value, since parsing the "inputString" value will create complications in calculations
-		first = parseInt(document.getElementById("inputScreen").value);
 		counter = 0;
-		inputString = "";
 		document.getElementById("inputScreen").value += operator
 		isOperator = true;
 	}
 }
 
 function calculate(){
-	second = parseInt(inputString);
+	var array = document.getElementById("inputScreen").value.split(operator);
+	first = parseInt(array[0]);
+	second = parseInt(array[1]);
 	switch(operator){
 		case "+":
 			document.getElementById("inputScreen").value = (first+second);
@@ -66,6 +63,8 @@ function erase(){
 	var lastChar = currentInput.charAt(currentInput.length-1);
 	if(lastChar.match(opRegex)){
 		isOperator = false;
+
+		//this creates issue
 		counter = first.length	
 	} 
 	else counter--;
@@ -75,6 +74,5 @@ function erase(){
 function resetVariables(){
 	isCalculated = true;
 	counter = 0;
-	inputString = ""
 	isOperator = false;
 }
