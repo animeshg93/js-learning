@@ -1,35 +1,29 @@
-function decrease() {
-    var counter = document.querySelector(".counter");
-    var num = Number(counter.innerHTML);
-    num = num - 1;
-    counter.innerHTML = num
+let count = 0;
 
-    changeColor(counter, num)
-}
+let value = document.querySelector(".counter");
+let num = value.textContent
+let btns = document.querySelectorAll(".btn")
 
-function reset() {
-    var counter = document.querySelector(".counter");
-    var num = Number(counter.innerHTML);
-    counter.innerHTML = 0
+btns.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+        const styles = e.currentTarget.classList;
 
-    changeColor(counter, 0);
-}
+        if (styles.contains("dec")) {
+            count--;
+        } else if (styles.contains("inc")) {
+            count++;
+        } else {
+            count = 0;
+        }
 
-function increase() {
-    var counter = document.querySelector(".counter");
-    var num = Number(counter.innerHTML);
-    num = num + 1;
-    counter.innerHTML = num
+        if (count < 0) {
+            value.style.color = "red"
+        } else if (count > 0) {
+            value.style.color = "green"
+        } else {
+            value.style.color = "black"
+        }
 
-    changeColor(counter, num)
-}
-
-function changeColor(counter, num) {
-    if (num < 0) {
-        counter.style.color = "red"
-    } else if (num > 0){
-        counter.style.color = "green"
-    } else {
-        counter.style.color = "black"
-    }
-}
+        value.textContent = count;
+    })
+})
