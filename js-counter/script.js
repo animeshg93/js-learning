@@ -1,15 +1,35 @@
 function decrease() {
-    var num = Number(document.querySelector(".counter").innerHTML);
+    var counter = document.querySelector(".counter");
+    var num = Number(counter.innerHTML);
     num = num - 1;
-    document.querySelector(".counter").innerHTML = num
+    counter.innerHTML = num
+
+    changeColor(counter, num)
 }
 
 function reset() {
-    document.querySelector(".counter").innerHTML = 0
+    var counter = document.querySelector(".counter");
+    var num = Number(counter.innerHTML);
+    counter.innerHTML = 0
+
+    changeColor(counter, 0);
 }
 
 function increase() {
-    var num = Number(document.querySelector(".counter").innerHTML);
-    num = num + 1
-    document.querySelector(".counter").innerHTML = num
+    var counter = document.querySelector(".counter");
+    var num = Number(counter.innerHTML);
+    num = num + 1;
+    counter.innerHTML = num
+
+    changeColor(counter, num)
+}
+
+function changeColor(counter, num) {
+    if (num < 0) {
+        counter.style.color = "red"
+    } else if (num > 0){
+        counter.style.color = "green"
+    } else {
+        counter.style.color = "black"
+    }
 }
