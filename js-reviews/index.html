@@ -5,15 +5,15 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background-color: darkgrey;" ;>
+<body style="background-color: darkgrey;" onload="api()">
 
 	<div class="main">
 		<h1 class="title">Our Reviews</h1>
 		<div class="box">
 			<div class="profile">
-				<img src="https://randomuser.me/api/portraits/men/93.jpg">
-				<p>John Smith</p>
-				<p>Software Engineer</p>
+				<img id="pic">
+				<p id="name"></p>
+				<p id="location"></p>
 			</div>
 			<div class="review">
 				<p>Prepared do an dissuade be so whatever steepest. Yet her beyond looked either day wished nay. By
@@ -22,11 +22,10 @@
 					dwelling old him her surprise finished families graceful. Gave led past poor met fine was new.</p>
 			</div>
 			<div class="controls">
-				<p>
-					<>
-				</p>
-				<button>Surprise me</button>
+				<img id="arr" src="./resources/la.png" alt="" >
+				<img id="arr" src="./resources/ra.png" alt="">
 			</div>
+			<button class="surprise">Surprise me</button>
 		</div>
 	</div>
 	<script src="script.js"></script>
