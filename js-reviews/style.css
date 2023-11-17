@@ -25,13 +25,7 @@
 	text-align: center;
 }
 
-#la {
-	display: inline-block;
-	height: 30px;
-	padding: 2%;
-}
-
-#ra {
+#arr {
 	display: inline-block;
 	height: 30px;
 	padding: 2%;
