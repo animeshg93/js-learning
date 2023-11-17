@@ -5,8 +5,9 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background-color: darkgrey;" onload="api()">
 
+<body style="background-color: darkgrey;">
+	
 	<div class="main">
 		<h1 class="title">Our Reviews</h1>
 		<div class="box">
@@ -22,13 +23,15 @@
 					dwelling old him her surprise finished families graceful. Gave led past poor met fine was new.</p>
 			</div>
 			<div class="controls">
-				<img id="arr" src="./resources/la.png" alt="" >
-				<img id="arr" src="./resources/ra.png" alt="">
+				<a href="#" onclick="getUser(false, false)"><img id="la" src="./resources/la.png" alt="la"></a>
+				<a href="#" onclick="getUser(false, true)"><img id="ra" src="./resources/ra.png" alt="ra"></a>
 			</div>
-			<button class="surprise">Surprise me</button>
+			<button class="surprise" onclick="getUser(true, false)">Surprise me</button>
 		</div>
 	</div>
-	<script src="script.js"></script>
+	
 </body>
+
+<script src="script.js"></script>
 
 </html>
